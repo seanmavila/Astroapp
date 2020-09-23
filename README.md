@@ -1,8 +1,8 @@
 # Astroapp
 Astronomy simulations for SHSU physics dept
 
-download node.js (includes npm)
-go to webdir file in cmd or terminal
-type command: npm install nodemon express express-session mysql pug bcrypt util.promisify
-run command: nodemon start
-open browser and go to localhost:3000
+1.download node.js (includes npm)
+2.go to webdir file in cmd or terminal
+3.type command: npm install nodemon express express-session mysql pug bcrypt util.promisify
+4.run command: nodemon start
+5.open browser and go to localhost:3000
