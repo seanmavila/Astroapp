@@ -1,0 +1,6 @@
+1. Create new page for HR diagram module
+2. Add link to HR on homepage and nav bar
+3. Create draggable and droppable containters and objects on HR module
+4. Style draggable objects
+5. Right or wrong spot to drag each object
+6. Clean up functionality

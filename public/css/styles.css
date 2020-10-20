@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #2c2f33;
@@ -18,11 +24,6 @@ header::after {
   content: "";
   display: table;
   clear: both;
-}
-
-.logo {
-  float: left;
-  padding: 10px 150px;
 }
 
 nav {
@@ -59,7 +60,7 @@ nav a::before {
   content: "";
   display: block;
   height: 5px;
-  background-color: #2c2f33;
+  background-color: #000;
 
   position: absolute;
   top: 0;
@@ -71,91 +72,92 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
+/* General Drag and Drop conatiner styles*/
 
-.form-box {
-  width: 380px;
-  height: 500px;
-  position: relative;
-  margin: 6% auto;
-  background: #23272a;
-  padding: 5px;
-  overflow: hidden;
-  border-radius: 10px;
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
 }
 
-.btn-box {
-  width: 220px;
-  margin: 35px auto;
-  position: relative;
-  box-shadow: 0 0 10px 2px #2c2f33;
-  border-radius: 30px;
+.draggable {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  transition: opacity 0.2s;
 }
 
-.toggle-btn {
-  padding: 10px 30px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  outline: none;
-  position: relative;
+.draggable:hover {
+  opacity: 0.5;
 }
 
-#btn {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 110px;
-  height: 100%;
-  background: #2c2f33;
-  border-radius: 30px;
-  transition: 0.5s;
+.droppable {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 3px dashed#111;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 
-.input-group {
-  top: 180px;
-  position: absolute;
-  width: 280px;
-  transition: 0.5s;
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none;
 }
 
-.input-field {
-  width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid #ffffff;
-  outline: none;
-  background: transparent;
+.dragclass1a {
+  background-color: blue;
 }
 
-.submit-btn {
-  width: 85%;
-  padding: 10px 30px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  background: #2c2f33;
-  border: 0;
-  outline: none;
-  border-radius: 30px;
+/* Styles for actual dragging and dropping*/
+
+.droppable.droppable-hover {
+  border-width: 5px;
+  transform: scale(1.1);
 }
 
-.check-box {
-  margin: 30px 10px 30px 0;
-}
-span {
-  color: #ffffff;
-  font-size: 12px;
-  bottom: 65px;
-  position: absolute;
+.droppable.dropped {
+  border-style: solid;
+  color: #fff;
 }
 
-#login {
-  left: 50px;
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-#register {
-  left: 450px;
+.droppable.dropped i {
+  pointer-events: none;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+  display: none;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .draggable-elements {
+    margin: 1.5rem;
+  }
 }
