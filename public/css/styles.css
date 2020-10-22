@@ -74,90 +74,229 @@ nav a:hover::before {
 }
 /* General Drag and Drop conatiner styles*/
 
-.draggable-elements {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-}
-
-.draggable {
-  height: 3rem;
-  width: 3rem;
+#container {
+  width: 100%;
+  height: 1000px;
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  margin: 0rem 0.5rem;
-  cursor: move;
-  transition: opacity 0.2s;
+  overflow: hidden;
+  border-radius: 7px;
+  touch-action: none;
 }
 
-.draggable:hover {
-  opacity: 0.5;
-}
-
-.droppable {
-  height: 6.5rem;
-  width: 6.5rem;
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  background-color: #fff;
-  border: 3px dashed#111;
-  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
-}
-
-.droppable span {
-  font-size: 1.25rem;
-  pointer-events: none;
-}
-
-.dragclass1a {
-  background-color: blue;
-}
-
-/* Styles for actual dragging and dropping*/
-
-.droppable.droppable-hover {
-  border-width: 5px;
-  transform: scale(1.1);
-}
-
-.droppable.dropped {
-  border-style: solid;
-  color: #fff;
-}
-
-.droppable.dropped span {
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.droppable.dropped i {
-  pointer-events: none;
-}
-
-.draggable.dragged {
+.item {
+  border-radius: 10%;
+  touch-action: none;
   user-select: none;
-  opacity: 0.1;
-  cursor: default;
-  display: none;
+  position: relative;
 }
 
-.draggable.dragged:hover {
-  opacity: 0.1;
+.oneE {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 255);
+  top: -35%;
+  left: 0%;
 }
 
-@media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-  .draggable-elements {
-    margin: 1.5rem;
-  }
+.oneD {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(0, 0, 255);
+  top: -25%;
+  left: 0%;
+}
+
+.oneC {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(0, 0, 255);
+  top: -16%;
+  left: 0%;
+}
+
+.oneB {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(0, 0, 255);
+  top: -8%;
+  left: 0%;
+}
+
+.oneA {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(0, 0, 255);
+  top: -1%;
+  left: 0%;
+}
+
+.twoE {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  top: -35%;
+  left: 0%;
+}
+
+.twoD {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+  top: -25%;
+  left: 0%;
+}
+
+.twoC {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  top: -16%;
+  left: 0%;
+}
+
+.twoB {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  top: -8%;
+  left: 0%;
+}
+
+.twoA {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  top: -1%;
+  left: 0%;
+}
+
+.threeE {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 165, 0);
+  top: -35%;
+  left: 0%;
+}
+
+.threeD {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 165, 0);
+  top: -25%;
+  left: 0%;
+}
+
+.threeC {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 165, 0);
+  top: -16%;
+  left: 0%;
+}
+
+.threeB {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 165, 0);
+  top: -8%;
+  left: 0%;
+}
+
+.threeA {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 165, 0);
+  top: -1%;
+  left: 0%;
+}
+
+.fourE {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 99, 71);
+  top: -35%;
+  left: 0%;
+}
+
+.fourD {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 99, 71);
+  top: -25%;
+  left: 0%;
+}
+
+.fourC {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 99, 71);
+  top: -16%;
+  left: 0%;
+}
+
+.fourB {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 99, 71);
+  top: -8%;
+  left: 0%;
+}
+
+.fourA {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 99, 71);
+  top: -1%;
+  left: 0%;
+}
+
+.fiveE {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  top: -35%;
+  left: 0%;
+}
+
+.fiveD {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 0, 0);
+  top: -25%;
+  left: 0%;
+}
+
+.fiveC {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 0, 0);
+  top: -16%;
+  left: 0%;
+}
+
+.fiveB {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 0, 0);
+  top: -8%;
+  left: 0%;
+}
+
+.fiveA {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 0, 0);
+  top: -1%;
+  left: 0%;
+}
+
+.item:active {
+  opacity: 0.75;
+}
+
+.item:hover {
+  cursor: pointer;
 }

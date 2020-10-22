@@ -1,104 +1,62 @@
 extends layout
 block content 
-    section.draggable-elements
-        #id1a.dragclass1a.draggable(draggable='true')
-            1A
-        #id1b.dragclass1b.draggable(draggable='true')
-            1B
-        #id1c.dragclass1c.draggable(draggable='true')
-            1C
-        #id1d.dragclass1d.draggable(draggable='true')
-            1D
-        #id1e.dragclass1e.draggable(draggable='true')
-            1E
-        #id2a.dragclass2a.draggable(draggable='true')
-            2A
-        #id2b.dragclass2b.draggable(draggable='true')
-            2B
-        #id2c.dragclass2c.draggable(draggable='true')
-            2C
-        #id2d.dragclass2d.draggable(draggable='true')
-            2D
-        #id2e.dragclass2e.draggable(draggable='true')
-            2E
-        #id3a.dragclass3a.draggable(draggable='true')
-            3A
-        #id3b.dragclass3b.draggable(draggable='true')
-            3B
-        #id3c.dragclass3c.draggable(draggable='true')
-            3C
-        #id3d.dragclass3d.draggable(draggable='true')
-            3D
-        #id3e.dragclass3e.draggable(draggable='true')
-            3E
-        #id4a.dragclass4a.draggable(draggable='true')
-            4A
-        #id4b.dragclass4b.draggable(draggable='true')
-            4B
-        #id4c.dragclass4c.draggable(draggable='true')
-            4C
-        #id4d.dragclass4d.draggable(draggable='true')
-            4D
-        #id4e.dragclass4e.draggable(draggable='true')
-            4E
-        #id5a.dragclass5a.draggable(draggable='true')
-            5A
-        #id5b.dragclass5b.draggable(draggable='true')
-            5B
-        #id5c.dragclass5c.draggable(draggable='true')
-            5C
-        #id5d.dragclass5d.draggable(draggable='true')
-            5D
-        #id5e.dragclass5e.draggable(draggable='true')
-            5E
-    section.droppable-elements
-        .droppable(data-draggable-id='id1a')
-            span 1A
-        .droppable(data-draggable-id='id1b')
-            span 1B
-        .droppable(data-draggable-id='id1c')
-            span 1C
-        .droppable(data-draggable-id='id1d')
-            span 1D
-        .droppable(data-draggable-id='id1e')
-            span 1E
-        .droppable(data-draggable-id='id2a')
-            span 1A
-        .droppable(data-draggable-id='id2b')
-            span 1B
-        .droppable(data-draggable-id='id2c')
-            span 1C
-        .droppable(data-draggable-id='id2d')
-            span 1D
-        .droppable(data-draggable-id='id2e')
-            span 1E
-        .droppable(data-draggable-id='id3a')
-            span 1A
-        .droppable(data-draggable-id='id3b')
-            span 1B
-        .droppable(data-draggable-id='id3c')
-            span 1C
-        .droppable(data-draggable-id='id3d')
-            span 1D
-        .droppable(data-draggable-id='id3e')
-            span 1E
-        .droppable(data-draggable-id='id4a')
-            span 1A
-        .droppable(data-draggable-id='id4b')
-            span 1B
-        .droppable(data-draggable-id='id4c')
-            span 1C
-        .droppable(data-draggable-id='id4d')
-            span 1D
-        .droppable(data-draggable-id='id4e')
-            span 1E
-        .droppable(data-draggable-id='id5a')
-            span 1A
-        .droppable(data-draggable-id='id5b')
-            span 1B
-        .droppable(data-draggable-id='id5c')
-            span 1C
-        .droppable(data-draggable-id='id5d')
-            span 1D
-        .droppable(data-draggable-id='id5e')
-            span 1E
+    #outerContainer
+        #container
+            .item.oneA
+                1A
+            .item.oneB
+                1B
+            .item.oneC
+                1C
+            .item.oneD
+                1D
+            .item.oneE
+                1E
+
+
+            .item.twoA
+                2A
+            .item.twoB
+                2B
+            .item.twoC
+                2C
+            .item.twoD
+                2D
+            .item.twoE
+                2E
+
+
+            .item.threeA
+                3A
+            .item.threeB
+                3B
+            .item.threeC
+                3C
+            .item.threeD
+                3D
+            .item.threeE
+                3E
+
+
+            .item.fourA
+                4A
+            .item.fourB
+                4B
+            .item.fourC
+                4C
+            .item.fourD
+                4D
+            .item.fourE
+                4E
+
+
+            .item.fiveA
+                5A
+            .item.fiveB
+                5B
+            .item.fiveC
+                5C
+            .item.fiveD
+                5D
+            .item.fiveE
+                5E

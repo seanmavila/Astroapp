@@ -1,53 +1,81 @@
-const draggableElements = document.querySelectorAll(".draggable");
-const droppableElements = document.querySelectorAll(".droppable");
+var container = document.querySelector("#container");
+var activeItem = null;
 
-// Event listeners for dragging and dropping
-draggableElements.forEach(elem => {
-    elem.addEventListener("dragstart", dragStart);
-});
+var active = false;
 
-droppableElements.forEach(elem =>{
-    elem.addEventListener("dragover", dragOver);
-    elem.addEventListener("dragenter", dragEnter);
-    elem.addEventListener("dragleave", dragLeave);
-    elem.addEventListener("drop", drop);
-});
+// Add event listeners
 
-// Drag and drop functionality
-function dragStart(event) {
-    event.dataTransfer.setData("text", event.target.style.color);    
-}
+container.addEventListener("touchstart", dragStart, false);
+container.addEventListener("touchend", dragEnd, false);
+container.addEventListener("touchmove", drag, false);
 
-function dragOver(event) {
-    if (!event.target.classList.contains("dropped")){
-        event.preventDefault();
+container.addEventListener("mousedown", dragStart, false);
+container.addEventListener("mouseup", dragEnd, false);
+container.addEventListener("mousemove", drag, false);
+
+// Starts dragging event for multiple elements (e)
+
+function dragStart(e) {
+
+    if (e.target !== e.currentTarget) {
+      active = true;
+
+      // this is the item we are interacting with
+      activeItem = e.target;
+
+      if (activeItem !== null) {
+        if (!activeItem.xOffset) {
+          activeItem.xOffset = 0;
+        }
+
+        if (!activeItem.yOffset) {
+          activeItem.yOffset = 0;
+        }
+
+        if (e.type === "touchstart") {
+          activeItem.initialX = e.touches[0].clientX - activeItem.xOffset;
+          activeItem.initialY = e.touches[0].clientY - activeItem.yOffset;
+        } else {
+          console.log("we movin ayyyyylmaoooo");
+          activeItem.initialX = e.clientX - activeItem.xOffset;
+          activeItem.initialY = e.clientY - activeItem.yOffset;
+        }
+      }
     }
-}
+  }
 
+// Ends dragging event for multiple elements (e)
+function dragEnd(e) {
+      if (activeItem !== null) {
+        activeItem.initialX = activeItem.currentX;
+        activeItem.initialY = activeItem.currentY;
+      }
 
-function dragEnter(event) {
-    if (!event.target.classList.contains("dropped")){
-        event.target.classList.add("droppable-hover");
+      active = false;
+      activeItem = null;
     }
-}
 
-function dragLeave(event) {
-    if (!event.target.classList.contains("dropped")){
-        event.target.classList.remove("droppable-hover");
-    }
-}
+// Dragging functionality, keeps track of the location individual elements (e) being dragged on the page
+function drag(e) {
+      if (active) {
+        if (e.type === "touchmove") {
+          e.preventDefault();
 
-function drop(event) {
-    event.preventDefault();
-    event.target.classList.remove("droppable-hover");
-    const draggableElementData = event.dataTransfer.getData("text");
-    const draggableElementData = event.target.getAttribute("data-draggable-id");
-    if (draggableElementData === droppableElementData) {
-        event.target.classList.add("dropped");
-        const draggableElement = document.getElementById(draggableElementData);
-        event.target.style.backgroundColor = DraggableElement.style.color;
-        draggableElement.classList.add("dragged");
-        draggableElement.setAttribute("draggable", "false");
-        event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+          activeItem.currentX = e.touches[0].clientX - activeItem.initialX;
+          activeItem.currentY = e.touches[0].clientY - activeItem.initialY;
+        } else {
+          activeItem.currentX = e.clientX - activeItem.initialX;
+          activeItem.currentY = e.clientY - activeItem.initialY;
+        }
+
+        activeItem.xOffset = activeItem.currentX;
+        activeItem.yOffset = activeItem.currentY;
+
+        setTranslate(activeItem.currentX, activeItem.currentY, activeItem);
+      }
     }
-}
+
+// Sets new position of element (e)
+function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }

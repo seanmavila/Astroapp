@@ -1,11 +1,12 @@
 doctype html
 html(lang="en")
-    head 
+    head
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no') 
         title=title
         include includes/styles
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-        script(src='js/dragDrop.js')
-    body 
+    body     
         .container
             include includes/header 
             block content
+    script(type='text/javascript' src='js/dragDrop.js' charset='utf-8')
