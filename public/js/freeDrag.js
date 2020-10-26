@@ -16,34 +16,35 @@ container.addEventListener("mousemove", drag, false);
 // Starts dragging event for multiple elements (e)
 
 function dragStart(e) {
+  // check if element is an item we want to drag
+    if (e.target.className.slice(0,4) == "item"){
+      if (e.target !== e.currentTarget) {
+        active = true;
 
-    if (e.target !== e.currentTarget) {
-      active = true;
+        // this is the item we are interacting with
+        activeItem = e.target;
 
-      // this is the item we are interacting with
-      activeItem = e.target;
+        if (activeItem !== null) {
+          if (!activeItem.xOffset) {
+            activeItem.xOffset = 0;
+          }
 
-      if (activeItem !== null) {
-        if (!activeItem.xOffset) {
-          activeItem.xOffset = 0;
-        }
+          if (!activeItem.yOffset) {
+            activeItem.yOffset = 0;
+          }
 
-        if (!activeItem.yOffset) {
-          activeItem.yOffset = 0;
-        }
-
-        if (e.type === "touchstart") {
-          activeItem.initialX = e.touches[0].clientX - activeItem.xOffset;
-          activeItem.initialY = e.touches[0].clientY - activeItem.yOffset;
-        } else {
-          console.log("we movin ayyyyylmaoooo");
-          activeItem.initialX = e.clientX - activeItem.xOffset;
-          activeItem.initialY = e.clientY - activeItem.yOffset;
+          if (e.type === "touchstart") {
+            activeItem.initialX = e.touches[0].clientX - activeItem.xOffset;
+            activeItem.initialY = e.touches[0].clientY - activeItem.yOffset;
+          } else {
+            console.log("we movin ayyyyylmaoooo");
+            activeItem.initialX = e.clientX - activeItem.xOffset;
+            activeItem.initialY = e.clientY - activeItem.yOffset;
+          }
         }
       }
     }
   }
-
 // Ends dragging event for multiple elements (e)
 function dragEnd(e) {
       if (activeItem !== null) {
