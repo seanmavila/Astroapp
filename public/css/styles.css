@@ -77,6 +77,42 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
+
+#modulebuttons li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  background-color: #23272a;
+  border-radius: 10px;
+  margin-right: 30px;
+  width: 200px;
+  line-height: 60px;
+  position: relative;
+  top: 400px;
+  left: 32.5%;
+}
+
+#modulebuttons li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+#modulebuttons li i {
+  padding-top: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 5rem;
+}
+
+#modulebuttons li:hover {
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 /* General Drag and Drop conatiner styles*/
 
 #container {
