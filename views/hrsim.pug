@@ -1,62 +1,70 @@
 extends layout
-block content 
+block content
+    h1.page HR Sorting
     #outerContainer
         #container
-            .item.oneA
-                1A
-            .item.oneB
-                1B
-            .item.oneC
-                1C
-            .item.oneD
-                1D
-            .item.oneE
-                1E
+            .grid-container
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+                .grid-item
+
+            .item#oneA 1A
+            .item#oneB 1B
+            .item#oneC 1C
+            .item#oneD 1D
+            .item#oneE 1E
 
 
-            .item.twoA
-                2A
-            .item.twoB
-                2B
-            .item.twoC
-                2C
-            .item.twoD
-                2D
-            .item.twoE
-                2E
+            .item#twoA 2A
+            .item#twoB 2B
+            .item#twoC 2C
+            .item#twoD 2D
+            .item#twoE 2E
 
 
-            .item.threeA
-                3A
-            .item.threeB
-                3B
-            .item.threeC
-                3C
-            .item.threeD
-                3D
-            .item.threeE
-                3E
+            .item#threeA 3A
+            .item#threeB 3B
+            .item#threeC 3C
+            .item#threeD 3D
+            .item#threeE 3E
 
 
-            .item.fourA
-                4A
-            .item.fourB
-                4B
-            .item.fourC
-                4C
-            .item.fourD
-                4D
-            .item.fourE
-                4E
+            .item#fourA 4A
+            .item#fourB 4B
+            .item#fourC 4C
+            .item#fourD 4D
+            .item#fourE 4E
 
 
-            .item.fiveA
-                5A
-            .item.fiveB
-                5B
-            .item.fiveC
-                5C
-            .item.fiveD
-                5D
-            .item.fiveE
-                5E
+            .item#fiveA 5A
+            .item#fiveB 5B
+            .item#fiveC 5C
+            .item#fiveD 5D
+            .item#fiveE 5E
+             
+            button.request-btn(type='button' onclick='shiftItem()')
+                | Request Block
+                span#myPopup.popuptext No more items!
+            script(type='text/javascript' src='js/random.js' charset='utf-8')         
