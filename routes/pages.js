@@ -5,7 +5,10 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   res.render("home", { title: "Astroapp" });
 });
-
+//get Galaxy Sorting page
+router.get("/galaxySort", (req, res, next) => {
+  res.render("galaxySort", { title: "Galaxy Sorting" });
+});
 // Get HR diagram page
 router.get("/hrsim", (req, res, next) => {
   res.render("hrsim", { title: "HR Diagram Simulation" });

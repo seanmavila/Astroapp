@@ -1,0 +1,39 @@
+extends layout
+block content
+    .app
+        header
+            h1(style='color:white;') GALAXY SORTING
+        .lists
+            .list
+                header
+                    h1(style='color:white;') Galaxies
+                #A.galaxyItem(draggable='true') 
+                    img(src='images/elliptical1.jpg' alt='Elliptical' width = '100' height = '100')
+                #A.galaxyItem(draggable='true')
+                    img(src='images/elliptical2.jpg' alt='Elliptical' width = '100' height = '100')
+                #A.galaxyItem(draggable='true')
+                    img(src='images/elliptical3.jpg' alt='Elliptical' width = '100' height = '100')
+                    
+                #B.galaxyItem(draggable='true')
+                    img(src='images/spiral1.jpg' alt='Spiral' width = '100' height = '100')
+                #B.galaxyItem(draggable='true')
+                    img(src='images/spiral2.jpg' alt='Spiral' width = '100' height = '100')
+                #B.galaxyItem(draggable='true')
+                    img(src='images/spiral3.jpg' alt='Spiral' width = '100' height = '100')
+
+                #C.galaxyItem(draggable='true')
+                    img(src='images/irregular1.jpg' alt='Irregular' width = '100' height = '100')
+                #C.galaxyItem(draggable='true')
+                    img(src='images/irregular2.jpg' alt='Irregular' width = '100' height = '100')
+                #C.galaxyItem(draggable='true')
+                    img(src='images/irregular3.jpg' alt='Irregular' width = '100' height = '100')
+            #A.list
+                header
+                    h1(style='color:white;') Elliptical
+            #B.list
+                header 
+                    h1(style='color:white;') Spiral
+            #C.list
+                header
+                    h1(style='color:white;') Irregular
+
