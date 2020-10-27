@@ -94,13 +94,14 @@ nav a:hover::before {
   width: 8%;
   padding: 10px 30px;
   cursor: pointer;
-  background: #55d6aa;
-  border: 0;
-  outline: none;
+  background: #23272a;
+  border: 0px;
+  outline: #000;
   border-radius: 30px;
   position: absolute;
   top: 875px;
   left: 46%;
+  color: #fff;
 }
 
 .request-btn .popuptext {
