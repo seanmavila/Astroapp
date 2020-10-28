@@ -136,6 +136,28 @@ nav a:hover::before {
   text-align: center;
 }
 
+#container2 {
+  background-color: #0E2431;
+  border: 5px solid #F5E4C3;
+  height: 275px;
+  width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+p{
+  color: white;
+}
+
+#input {
+  width: 100px;
+  margin: 25px auto;
+}
+
+#btn {
+  margin: 25px auto auto 5px;
+}
+
 .request-btn {
   width: 8%;
   padding: 10px 30px;
