@@ -1,12 +1,26 @@
-extends layout
-block content 
-    #outerContainer
-        #container
-    
-    //make textbox where students can type answer to the question
-    //"What does this spectrum represent?"
-    //make answer all lowercase and see if it matches to "guess" in ssm.js
-    //have a simple boolean return if they are correct or not 
-    //popup window that says if they were right/wrong and 
-    //returns them to home screen  
-    script(type='text/javascript' src='js/smm.js' charset='utf-8')
+extend layout
+block content
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="it=edge">
+    <link rel="stylesheet" href="style.css">
+    title Document
+    h1(style='color:white;') Hydrogen
+    img(src='images/img_1.jpg' width = '600' height = '100')
+    h1(style='color:white;') Helium
+    img(src='images/img_2.jpg' width = '600' height = '100')
+    h1(style='color:white;') Oxygen
+    img(src='images/img_3.jpg' width = '600' height = '100')
+    h1(style='color:white;') Neon
+    img(src='images/img_4.jpg' width = '600' height = '100')
+    h1(style='color:white;') Mercury
+    img(src='images/img_5.jpg' width = '600' height = '100')
+
+    <div id="container2">
+        <p>Which elements spectrum is shown above?</p>
+        <p id="outputtext">enter your answer below:</p>
+        <input type = "text" id="userInput"><button id="btn">Enter</button>
+    </div>
+
+    <script src="smm.js"></script>
+
