@@ -12,7 +12,7 @@ h1 {
 
 body {
   margin: 0;
-  background: #2c2f33;
+  background: #044990;
   font-weight: 400;
 }
 
@@ -32,7 +32,7 @@ h1.page {
 }
 
 header {
-  background: #23272a;
+  background: #f88f00;
 }
 
 header::after {
@@ -68,7 +68,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #000;
+  color: #5092e9;
 }
 
 nav a::before {
@@ -92,7 +92,7 @@ nav a:hover::before {
   float: left;
   list-style: none;
   text-align: center;
-  background-color: #23272a;
+  background-color: #f88f00;
   border-radius: 10px;
   margin-right: 30px;
   width: 250px;
@@ -118,7 +118,7 @@ nav a:hover::before {
 
 #modulebuttons li:hover {
   text-decoration: none;
-  background-color: #000000;
+  background-color: #df8200;
   border-radius: 10px;
   cursor: pointer;
 }
