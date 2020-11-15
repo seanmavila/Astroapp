@@ -178,4 +178,9 @@ router.post("/createMovie", (req, res, next) => {
   });
 });
 
+// Get spectra slider page
+router.get("/SpectraSlider", (req, res, next) => {
+  res.render("SpectraSlider", { title: "Stellar Spectra Slider" });
+});
+
 module.exports = router;
