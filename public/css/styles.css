@@ -437,8 +437,9 @@ p {
   cursor: pointer;
 }
 
-element { 
-  flex-flow: column wrap 100;            
+element {
+  flex-flow: column wrap 100;
+}
 
 .form-box {
   width: 380px;
