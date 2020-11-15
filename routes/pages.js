@@ -19,4 +19,9 @@ router.get("/spectra", (req, res, next) => {
   res.render("spectra", { title: "Stellar Spectra Matching" });
 });
 
+// Get spectra slider page
+router.get("/SpectraSlider", (req, res, next) => {
+  res.render("SpectraSlider", { title: "Stellar Spectra Slider" });
+});
+
 module.exports = router;
