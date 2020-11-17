@@ -1,26 +1,118 @@
-extend layout
+extends layout
 block content
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="it=edge">
-    <link rel="stylesheet" href="style.css">
-    title Document
-    h1(style='color:white;') Hydrogen
-    img(src='images/img_1.jpg' width = '600' height = '100')
-    h1(style='color:white;') Helium
-    img(src='images/img_2.jpg' width = '600' height = '100')
-    h1(style='color:white;') Oxygen
-    img(src='images/img_3.jpg' width = '600' height = '100')
-    h1(style='color:white;') Neon
-    img(src='images/img_4.jpg' width = '600' height = '100')
-    h1(style='color:white;') Mercury
-    img(src='images/img_5.jpg' width = '600' height = '100')
+    .app
+        h1.page Stellar Spectrum Sorting
+        .lists
+            .list
+                #A.spectraItem(draggable='true') 
+                    img(src='images/img10.png' alt='10' width = '200' height = '30')
 
-    <div id="container2">
-        <p>Which elements spectrum is shown above?</p>
-        <p id="outputtext">enter your answer below:</p>
-        <input type = "text" id="userInput"><button id="btn">Enter</button>
-    </div>
+                #B.spectraItem(draggable='true')
+                    img(src='images/img11.png' alt='11' width = '200' height = '30')
 
-    <script src="smm.js"></script>
+                #C.spectraItem(draggable='true')
+                    img(src='images/img12.png' alt='12' width = '200' height = '30')
+                         
+                #D.spectraItem(draggable='true')
+                    img(src='images/img7.png' alt='7' width = '200' height = '30')
+                
+                #E.spectraItem(draggable='true')
+                    img(src='images/img8.png' alt='8' width = '200' height = '30')
+                
+                #F.spectraItem(draggable='true')
+                    img(src='images/img9.png' alt='9' width = '200' height = '30')
 
+                #G.spectraItem(draggable='true')
+                    img(src='images/img13.png' alt='13' width = '200' height = '30')
+                
+                #H.spectraItem(draggable='true')
+                    img(src='images/img14.png' alt='14' width = '200' height = '30')
+                
+                #I.spectraItem(draggable='true')
+                    img(src='images/img15.png' alt='15' width = '200' height = '30')
+                
+                #J.spectraItem(draggable='true')
+                    img(src='images/img16.png' alt='16' width = '200' height = '30')
+                
+                #K.spectraItem(draggable='true')
+                    img(src='images/img17.png' alt='17' width = '200' height = '30')
+                
+                #L.spectraItem(draggable='true')
+                    img(src='images/img18.png' alt='18' width = '200' height = '30')
+                
+                #M.spectraItem(draggable='true')
+                    img(src='images/img19.png' alt='19' width = '200' height = '30')
+                
+                #N.spectraItem(draggable='true')
+                    img(src='images/img20.png' alt='20' width = '200' height = '30')
+                
+                #O.spectraItem(draggable='true')
+                    img(src='images/img21.png' alt='21' width = '200' height = '30')
+                
+                #P.spectraItem(draggable='true')
+                    img(src='images/img22.png' alt='22' width = '200' height = '30')
+                
+                #Q.spectraItem(draggable='true')
+                    img(src='images/img1.png' alt='1' width = '200' height = '30')
+                
+                #R.spectraItem(draggable='true')
+                    img(src='imagesimg2.png' alt='2' width = '200' height = '30')
+                
+                #S.spectraItem(draggable='true')
+                    img(src='images/img3.png' alt='3' width = '200' height = '30')
+                
+                #T.spectraItem(draggable='true')
+                    img(src='images/img4.png' alt='4' width = '200' height = '30')
+                
+                #U.spectraItem(draggable='true')
+                    img(src='images/img5.png' alt='5' width = '200' height = '30')
+                
+                #V.spectraItem(draggable='true')
+                    img(src='images/img6.png' alt='6' width = '200' height = '30')
+            #element
+                p(style='color:white;') 1
+                #Q.list
+                p(style='color:white;') 2
+                #R.list
+                p(style='color:white;') 3
+                #S.list
+                p(style='color:white;') 4
+                #T.list
+                p(style='color:white;') 5
+                #U.list
+                p(style='color:white;') 6
+                #V.list
+                p(style='color:white;') 7
+                #D.list
+                p(style='color:white;') 8
+                #E.list
+                p(style='color:white;') 9
+                #F.list
+                p(style='color:white;') 10
+                #A.list
+                p(style='color:white;') 11
+                #B.list
+                p(style='color:white;') 12
+                #C.list
+                p(style='color:white;') 13
+                #G.list
+                p(style='color:white;') 14
+                #H.list
+                p(style='color:white;') 15
+                #I.list
+                p(style='color:white;') 16
+                #J.list
+                p(style='color:white;') 17
+                #K.list
+                p(style='color:white;') 18
+                #L.list
+                p(style='color:white;') 19
+                #M.list
+                p(style='color:white;') 20
+                #N.list
+                p(style='color:white;') 21
+                #O.list
+                p(style='color:white;') 22
+                #P.list
+
+        script(type='text/javascript' src='js/smm.js' charset='utf-8')

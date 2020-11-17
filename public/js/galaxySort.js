@@ -1,6 +1,14 @@
 const list_items = document.querySelectorAll('.galaxyItem');
 const lists = document.querySelectorAll('.list');
 
+/*
+var encryptedAES = CryptoJS.AES.encrypt("Javascript is fun :)", "Password");
+console.log("Encrypted Message :: " + encryptedAES.toString());
+var decryptedBytes = CryptoJS.AES.decrypt(encryptedAES, "Password");
+var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
+console.log("Decrypted Message :: " + plaintext);
+*/
+
 let draggedItem = null;
 let draggedItemData = null;
 for(let i = 0; i < list_items.length; i++)
