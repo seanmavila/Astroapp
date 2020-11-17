@@ -183,4 +183,9 @@ router.get("/SpectraSlider", (req, res, next) => {
   res.render("SpectraSlider", { title: "Stellar Spectra Slider" });
 });
 
+// Get spectra page
+router.get("/fusion", (req, res, next) => {
+  res.render("fusion", { title: "Nuclear Fusion Accounting" });
+});
+
 module.exports = router;
