@@ -19,4 +19,9 @@ router.get("/spectra", (req, res, next) => {
   res.render("spectra", { title: "Stellar Spectra Matching" });
 });
 
+// Get spectra page
+router.get("/fusion", (req, res, next) => {
+  res.render("fusion", { title: "Nuclear Fusion Accounting" });
+});
+
 module.exports = router;
