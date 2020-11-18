@@ -47,6 +47,9 @@ for(let i = 0; i < list_items.length; i++)
             if(isCorrect)
             {
                 this.append(draggedItem);
+            }
+            if (!isCorrect && i === 1){
+                alert("That doesn't go there!");
             } 
             
             this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
