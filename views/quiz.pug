@@ -1,0 +1,9 @@
+extends layout
+append links 
+    li(style="float: right;")
+        a(href="/logout") Logout 
+block content
+    .quizcontainer
+        #home.flex-center.flex-column
+            h1 Quiz
+            a.quizbtn(href='/game') Play
