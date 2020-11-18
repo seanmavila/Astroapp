@@ -1,0 +1,12 @@
+extends layout
+append links 
+    li(style="float: right;")
+        a(href="/logout") Logout 
+block content
+    .quizcontainer
+        #end.flex-center.flex-column
+            h1#finalScore
+            a.quizbtn(href='/game') Play Again
+            a.quizbtn(href='/home') Go Home
+    script(src='js/end.js')
+

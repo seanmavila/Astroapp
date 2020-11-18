@@ -1,20 +1,17 @@
 extends layout
-append links 
+append links
     li(style="float: right;")
-        a(href="/logout") Logout 
+        a(href="/logout") Logout
+    li(style="float: right;")
+        a(href="/adminHome") Home  
 block content
-    h1.page Module List
+    h1.page Admin Functions
     .modulelist
         ul#modulebuttons
-            li  
-                a(href="/hrsim") Star Sorting
-                    i.fa.fa-grip-horizontal
-            li
-                a(href="/galaxySort") Galaxy Sorting Module
-                    i.fa.fa-columns
-            li
-                a(href="/spectra") Stellar Spectra Matching
-                    i.fa.fa-minus  
-            li
-                a(href="/adminPriv") Admin Privileges
-                    i.fa.fa-atom 
+            .column            
+                li  
+                    a(href="/updateUser") Update User
+                        i.fa.fa-user-edit
+                li
+                    a(href="/delUser") Delete User
+                        i.fa.fa-user-minus  

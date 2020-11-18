@@ -50,6 +50,28 @@ router.get("/adminPriv", (req, res, next) => {
   res.redirect("/");
 });
 
+// Get Update user page
+router.get("/updateUser", (req, res, next) => {
+  let user = req.session.user;
+
+  if (user) {
+    res.render("updateUser", { opp: req.session.opp, name: user.fullname });
+    return;
+  }
+  res.redirect("/");
+});
+
+// Get Delete User page
+router.get("/delUser", (req, res, next) => {
+  let user = req.session.user;
+
+  if (user) {
+    res.render("delUser", { opp: req.session.opp, name: user.fullname });
+    return;
+  }
+  res.redirect("/");
+});
+
 // Get loggout page
 router.get("/logout", (req, res, next) => {
   // Check if the session is exist
@@ -89,6 +111,39 @@ router.get("/spectra", (req, res, next) => {
 
   if (user) {
     res.render("spectra", { opp: req.session.opp, name: user.fullname });
+    return;
+  }
+  res.redirect("/");
+});
+
+//get Quiz page
+router.get("/quiz", (req, res, next) => {
+  let user = req.session.user;
+
+  if (user) {
+    res.render("quiz", { opp: req.session.opp, name: user.fullname });
+    return;
+  }
+  res.redirect("/");
+});
+
+//get Quiz-Game page
+router.get("/game", (req, res, next) => {
+  let user = req.session.user;
+
+  if (user) {
+    res.render("game", { opp: req.session.opp, name: user.fullname });
+    return;
+  }
+  res.redirect("/");
+});
+
+//get Quiz-End page
+router.get("/end", (req, res, next) => {
+  let user = req.session.user;
+
+  if (user) {
+    res.render("end", { opp: req.session.opp, name: user.fullname });
     return;
   }
   res.redirect("/");
@@ -160,20 +215,6 @@ router.post("/updateUser", (req, res, next) => {
   };
   // call create function. to create a new user. if there is no error this function will return it's id.
   user.update(userInput, function (lastId) {
-    res.redirect("/adminHome");
-  });
-});
-
-// Post register data
-router.post("/createMovie", (req, res, next) => {
-  // prepare an object containing all user inputs.
-  let userInput = {
-    mid: req.body.mid,
-    title: req.body.title,
-    genere: req.body.genere,
-  };
-  // call create function. to create a new user. if there is no error this function will return it's id.
-  movies.create(userInput, function (lastId) {
     res.redirect("/adminHome");
   });
 });
