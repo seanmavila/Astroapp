@@ -117,13 +117,13 @@ nav a:hover::before {
 
 #modulebuttons li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
 }
 
 #modulebuttons li i {
   padding-bottom: 15px;
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
   display: block;
   font-size: 5rem;
 }
