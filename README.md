@@ -6,11 +6,12 @@ Astronomy simulations for SHSU physics dept
 2. Go to github and make an account
 3. Go to https://github.com/seanmavila/Astroapp
 4. Click green button labeled "Code" and download zip
-5. Open visual studio code and open Astroapp file
-6. Press Ctrl + Shift + P to open terminal
-7. Type command: npm install nodemon express express-session mysql pug bcrypt util.promisify
-8. Run command: nodemon start
-9. Open browser and go to localhost:3000
+5. Install and open visual studio code
+6. Navigate to File > Open Folder > Where ever your Astroapp folder is
+7. Navigate to Terminal > new terminal
+8. Type command: npm install nodemon express express-session mysql pug bcrypt util.promisify
+9. Run command: npm start
+10. Open browser and go to localhost:3000
 
 ---For DB---
 
@@ -22,4 +23,3 @@ Astronomy simulations for SHSU physics dept
 6. Change the file path in the import options to the location of the astrop.sql file in your Astroapp folder (core)
 7. Select the the astrop.sql database
 8. Click start import
-9. I think its something like that....? Gl homies
